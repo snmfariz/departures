@@ -144,7 +144,7 @@ async function refreshAll() {
     setRefreshStatus("");
   } catch (err) {
     console.error(err);
-    setRefreshStatus(err);
+    setRefreshStatus(Connection failed: ${err.message});
   } finally {
     scheduleNextRefresh();
   }
