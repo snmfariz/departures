@@ -1,4 +1,4 @@
-  const STOP_CONFIG = [
+const STOP_CONFIG = [
   {
     codes: [
       "30009567", // Spaklerweg Centraal (53/54)
@@ -31,7 +31,7 @@ function computeApiBase() {
   if (queryBase) return queryBase.replace(/\/+$/, "");
   if (window.OVAPI_BASE) return window.OVAPI_BASE.replace(/\/+$/, "");
   // Browsers block mixed content; when served over https use same-protocol proxy or try https host
-  if (window.location.protocol === "https:") return "http://v0.ovapi.nl";
+  if (window.location.protocol === "https:") return "https://v0.ovapi.nl";
   return "http://v0.ovapi.nl";
 }
 
@@ -144,7 +144,7 @@ async function refreshAll() {
     setRefreshStatus("");
   } catch (err) {
     console.error(err);
-    setRefreshStatus(Connection failed: ${err.message});
+    setRefreshStatus("Connection failed");
   } finally {
     scheduleNextRefresh();
   }
