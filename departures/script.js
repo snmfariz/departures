@@ -21,9 +21,9 @@ let timer;
 const API_BASE = computeApiBase();
 const REFRESH_INTERVAL_MS = 60_000;
 const LINE_COLORS = {
-  "51": "#f39100",
-  "53": "#e3001f",
-  "54": "#fec600",
+  "51": "#F2922C",
+  "53": "#E20224",
+  "54": "#FFEE00",
 };
 
 function computeApiBase() {
